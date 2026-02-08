@@ -1,0 +1,8 @@
+config.php
+storage/messages/active/*
+storage/messages/expired/*
+storage/messages/*.json
+!storage/messages/active/.gitkeep
+!storage/messages/expired/.gitkeep
+.DS_Store
+*.log

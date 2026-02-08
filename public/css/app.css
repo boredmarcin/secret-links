@@ -1,0 +1,310 @@
+/* ═══════════════════════════════
+   SECRET LINKS — POSTER THEME
+   Inspired by portfolio-poster design
+═══════════════════════════════ */
+
+/* Base */
+body {
+    font-family: 'Outfit', sans-serif;
+    background: #F5F2EB;
+    color: #111;
+}
+
+.display {
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mono {
+    font-family: 'Space Mono', monospace;
+}
+
+/* ═══════════════════════════════
+   BUTTONS
+═══════════════════════════════ */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: #111;
+    color: white;
+    border: 2px solid #111;
+    border-radius: 2px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background: #FF3B30;
+    border-color: #FF3B30;
+    transform: translateY(-2px);
+}
+
+.btn-primary:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: transparent;
+    color: #111;
+    border: 2px solid rgba(17, 17, 17, 0.2);
+    border-radius: 2px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    border-color: #111;
+    transform: translateY(-2px);
+}
+
+.btn-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: transparent;
+    color: #FF3B30;
+    border: 1.5px solid #FF3B30;
+    border-radius: 2px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-text:hover {
+    background: #FF3B30;
+    color: white;
+}
+
+/* ═══════════════════════════════
+   FORM ELEMENTS
+═══════════════════════════════ */
+.input-field {
+    width: 100%;
+    padding: 16px;
+    background: white;
+    color: #111;
+    border: 2px solid rgba(17, 17, 17, 0.15);
+    border-radius: 2px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #2D5BFF;
+}
+
+.input-field::placeholder {
+    color: #999;
+}
+
+textarea.input-field {
+    resize: none;
+}
+
+textarea {
+    width: 100%;
+}
+
+/* ═══════════════════════════════
+   ALERTS
+═══════════════════════════════ */
+.alert-error {
+    padding: 16px;
+    background: rgba(255, 59, 48, 0.05);
+    border: 2px solid #FF3B30;
+    border-radius: 2px;
+    color: #111;
+}
+
+.alert-success {
+    padding: 16px;
+    background: rgba(200, 255, 0, 0.08);
+    border: 2px solid #C8FF00;
+    border-radius: 2px;
+    color: #111;
+}
+
+.alert-info {
+    padding: 16px;
+    background: rgba(45, 91, 255, 0.05);
+    border: 2px solid #2D5BFF;
+    border-radius: 2px;
+    color: #111;
+}
+
+/* ═══════════════════════════════
+   FOOTER
+═══════════════════════════════ */
+.footer-credit {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+.footer-credit a {
+    color: #999;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-credit a:hover {
+    color: #111;
+}
+
+/* ═══════════════════════════════
+   ANIMATIONS
+═══════════════════════════════ */
+.fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.spinner {
+    border: 3px solid rgba(17, 17, 17, 0.1);
+    border-left-color: #111;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.copy-success {
+    animation: copyPulse 0.6s ease-out;
+}
+
+@keyframes copyPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.countdown-critical {
+    animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.message-reveal {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.modal-enter {
+    animation: modalEnter 0.3s ease-out forwards;
+}
+
+@keyframes modalEnter {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.modal-exit {
+    animation: modalExit 0.2s ease-in forwards;
+}
+
+@keyframes modalExit {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.95); }
+}
+
+/* ═══════════════════════════════
+   BURN EFFECT
+═══════════════════════════════ */
+.burn-effect {
+    animation: enhancedBurn 3s forwards;
+}
+
+@keyframes enhancedBurn {
+    0% {
+        opacity: 1;
+        filter: brightness(1) blur(0px);
+        transform: scale(1);
+    }
+    30% {
+        filter: brightness(1.2) sepia(0.3);
+        transform: scale(1.01);
+    }
+    60% {
+        filter: brightness(0.8) blur(2px) sepia(0.6);
+        opacity: 0.6;
+        transform: scale(0.98);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.9);
+        filter: blur(8px) sepia(1);
+    }
+}
+
+/* ═══════════════════════════════
+   SCROLLBAR
+═══════════════════════════════ */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F5F2EB;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+/* ═══════════════════════════════
+   REDUCED MOTION
+═══════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
